@@ -156,4 +156,4 @@ def about_buttons(bot, update):
     ]
     return pyrogram.types.InlineKeyboardMarkup(buttons)
 
-print("Telegram AutoCaption
+print("Telegram AutoCaption")
