@@ -76,11 +76,12 @@ def edit_caption(bot, update: pyrogram.types.Message):
     motech, _ = get_file_details(update)
     try:
         if motech:
+            file_name = getattr(motech, "file_name", "Unknown")
             try:
-                update.edit(custom_caption.format(file_name=motech.file_name))
+                update.edit(custom_caption.format(file_name=file_name))
             except pyrogram.errors.FloodWait as FloodWait:
-                asyncio.sleep(FloodWait.value)
-                update.edit(custom_caption.format(file_name=motech.file_name))
+                asyncio.sleep(FloodWait.x)
+                update.edit(custom_caption.format(file_name=file_name))
     except pyrogram.errors.MessageNotModified:
         pass
 
@@ -156,4 +157,8 @@ def about_buttons(bot, update):
     ]
     return pyrogram.types.InlineKeyboardMarkup(buttons)
 
-print("Telegram AutoCaption")
+print("Telegram AutoCaption V1 Bot Start")
+print("Bot Created By https://t.me/Illegal_Developer")
+
+if __name__ == "__main__":
+    AutoCaptionBotV1.run()
