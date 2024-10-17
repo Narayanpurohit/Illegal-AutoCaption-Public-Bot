@@ -4,17 +4,17 @@ import asyncio
 import re
 
 try:
-    app_id = int(os.environ.get("app_id", "123456"))
+    app_id = int(os.environ.get("app_id", "26847865"))
 except Exception as app_id:
     print(f"⚠️ App ID Invalid {app_id}")
 
 try:
-    api_hash = os.environ.get("api_hash", "71e4d726e727190eaa8c0486f0d")
+    api_hash = os.environ.get("api_hash", "0ef9fdd3e5f1ed49d4eb918a07b8e5d6")
 except Exception as api_id:
     print(f"⚠️ Api Hash Invalid {api_hash}")
 
 try:
-    bot_token = os.environ.get("bot_token", "6631918034:AAFzEUUyh_PrrgIttLdtr_")
+    bot_token = os.environ.get("bot_token", "6420356438:AAEZCItHjzerPRBpHYUTP9746Gbc4DrPIB0ll")
 except Exception as bot_token:
     print(f"⚠️ Bot Token Invalid {bot_token}")
 
